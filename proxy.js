@@ -6,7 +6,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const response = await fetch('https://ffp.tactiq.io/proxy', {
+    const response = await fetch('https://hook.eu2.make.com/mnlmqnrelehv5i7bdba7sj7m5oe7art4', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -21,3 +21,4 @@ export default async function handler(req, res) {
     res.status(500).json({ error: 'Failed to fetch from Tactiq', details: err.message });
   }
 }
+
