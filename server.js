@@ -9,7 +9,7 @@ app.use(express.json());
 // Endpoint שמקבל הודעה מהצ’אט
 app.post('/proxy', async (req, res) => {
   try {
-    const response = await fetch('https://ffp.tactiq.io/proxy', {
+    const response = await fetch('https://hook.eu2.make.com/mnlmqnrelehv5i7bdba7sj7m5oe7art4', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -27,3 +27,4 @@ app.post('/proxy', async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Proxy server running on port ${PORT}`));
+
