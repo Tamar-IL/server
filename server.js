@@ -21,10 +21,11 @@ app.post('/proxy', async (req, res) => {
     const data = await response.json();
     res.json(data);
   } catch (err) {
-    res.status(500).json({ error: 'Failed to fetch from Tactiq', details: err.message });
+    res.status(500).json({ error: 'Failed to fetch from MAKE', details: err.message });
   }
 });
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Proxy server running on port ${PORT}`));
+
 
