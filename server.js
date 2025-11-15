@@ -11,10 +11,7 @@ app.post('/proxy', async (req, res) => {
   try {
     const response = await fetch('https://hook.eu2.make.com/mnlmqnrelehv5i7bdba7sj7m5oe7art4', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        // 'Authorization': 'Bearer YOUR_API_KEY' // אם צריך
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(req.body)
     });
 
@@ -27,5 +24,6 @@ app.post('/proxy', async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Proxy server running on port ${PORT}`));
+
 
 
